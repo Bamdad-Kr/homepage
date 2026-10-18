@@ -1,164 +1,168 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bamdad's Resume</title>
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-            line-height: 1.6;
-            margin: 0;
-      
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #008d78;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        header p {
-            margin: 5px 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .section h2 {
-            color: #008672;
-            text-align: justify;
-            font-size: 20px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-        .section p,
-        .section ul,
-        .section table {
-            margin: 0;
-            padding: 0;
-        }
-
-        .section ul {
-            list-style: none;
-            padding-left: 15px;
-        }
-
-        .section ul li {
-            margin-bottom: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table th,
-        table td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fateme Zahra Keshtkar · Computer Science & Computational Biology</title>
+<meta name="description" content="Computer Science undergraduate researcher working at the intersection of computational biology, graph learning, and systems-level omics.">
+<meta name="theme-color" content="#0f1b1e">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Fateme Zahra KeshtKar</h1>
-        <p>
-            Email:
-            <a href="mailto:fz.krypton@gmail.com" style="color: white; text-decoration: underline">fz.krypton@gmail.com</a>
-        </p>
-        <p>Phone: +98 9019022686</p>
-    </header>
-    <div class="container">
-        <div class="section">
-        <h2>About Me</h2>
-            <p>
-            Focused and driven Computer Science student from Shiraz with a strong passion for intertwining technology, complex systems, and biology. Skilled in leveraging code-based solutions for intricate challenges while actively exploring creative pursuits such as writing and photography. Eager to collaborate with professionals and peers in the tech and science communities, seeking opportunities to expand my WordPress and programming expertise. Actively seeking opportunities to expand my knowledge and contribute to cutting-edge projects in the tech and science industries.
-            </p>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Linux</li>
-                <li>TeamWork</li>
-                <li>Problem-Solving and Debugging</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <table>
-                <tr>
-                    <th>Graduation Year</th>
-                    <th>Institution</th>
-                    <th>Degree</th>
-                </tr>
-                <tr>
-                    <td>2027</td>
-                    <td> Shiraz Azad University</td>
-                    <td>Bachelor of Computer Science</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>Farzanegan Highschool</td>
-                    <td>Highschool Diploma</td>
-                </tr>
-            </table>
-        </div>
-        <div class="section">
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    <strong>Content Writer</strong> (CS50xShiraz, Jun 2024 - Jan 2025)
-                    <p>
-                    Created high-quality content for LinkedIn and the company blog.
-                    </p>
-                </li>
-                <li>
-                    <strong>Scratch Teacher</strong> (Abarkelas, May 2024 - Present)
-                    <p>Over 200 hours of teaching Scratch to young learners.</p>
-                </li>
-                <li>
-                    <strong>Associate</strong> (EHIA, 2024 - Present)
-                    <p>
-                    Led and coordinated diverse masterclasses from conception to execution.
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Codelita - 2024</li>
-                <li>Neurotalk - 2024</li>
-                <li>Hour Of Code - 2022</li>
-            </ul>
-        </div>
-    </div>
-</body>
+<canvas id="net" aria-hidden="true"></canvas>
 
+<header class="nav">
+  <a href="#top" class="brand">F<span>Z</span>K</a>
+  <nav id="menu">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#learning">Learning</a>
+    <a href="#outreach">Outreach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="theme" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">◐</button>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Hello, I'm</p>
+    <h1>Fateme Zahra <span class="grad">Keshtkar</span></h1>
+    <p class="lead">Computer Science student exploring <span id="typed" class="grad"></span><span class="caret">|</span></p>
+    <p class="sub">Undergraduate researcher at the Systems Medicine Research Core, Shiraz University of Medical Sciences. I'm drawn to problems where code meets living systems.</p>
+    <div class="cta">
+      <a class="btn primary" href="#publications">See my work</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+    <ul class="stats">
+      <li><b data-count="4">0</b><span>bioRxiv preprints</span></li>
+      <li><b data-count="3">0</b><span>conference abstracts</span></li>
+      <li><b data-count="5">0</b><span>research areas</span></li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <h2>About</h2>
+    <div class="grid two">
+      <p>I'm a Computer Science undergraduate with a strong passion for computational approaches to the life sciences and a deep curiosity about how complex biological systems work. I'm interested in problems at the intersection of computer science, biology, and systems-level omics.</p>
+      <p>My contributions span noncoding RNA–cancer interaction prediction, interpretable neural-symbolic peptide modeling, and hypergraph learning for antimicrobial combination effects. I pair my CS background with self-directed study in biology, and I'm now looking for hands-on experimental experience alongside computational design.</p>
+    </div>
+    <div class="chips">
+      <span class="chip">Computational biology</span><span class="chip">Bioinformatics</span><span class="chip">Systems biology</span><span class="chip">Graph &amp; hypergraph learning</span><span class="chip">Peptide modeling</span>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="reveal">
+    <h2>Research</h2>
+    <p class="muted">Undergraduate Researcher · Systems Medicine Research Core, Shiraz University of Medical Sciences · 2026 – present</p>
+
+    <h3>What I work on</h3>
+    <div class="cards" id="areas">
+      <button class="card flip" data-k="peptide"><h4>Peptide function prediction</h4><p>Interpretable and generative modeling of peptides.</p></button>
+      <button class="card flip" data-k="amr"><h4>Antimicrobial combinations</h4><p>Predicting synergy and antagonism across bacterial targets.</p></button>
+      <button class="card flip" data-k="ncrna"><h4>ncRNA–cancer interactions</h4><p>Graph models for multi-task prediction.</p></button>
+      <button class="card flip" data-k="panc"><h4>Pancreatic cancer omics</h4><p>Systems-level and hallmark-based analysis.</p></button>
+      <button class="card flip" data-k="micro"><h4>Microbiome–metabolite–cancer</h4><p>Interactome prediction with graph transformers.</p></button>
+    </div>
+    <div id="area-detail" class="detail" aria-live="polite">Tap a card to see the related work.</div>
+
+    <h3>Current projects</h3>
+    <div class="cards two-col">
+      <article class="card static">
+        <span class="badge">In preparation</span>
+        <h4>ACP-GenVAE</h4>
+        <p>An ESM-2-guided conditional variational autoencoder for de novo anticancer peptide generation, being extended with molecular dynamics on cancer-cell membranes.</p>
+        <small>Supervisor: Dr. Parisa Hosseinzadeh</small>
+      </article>
+      <article class="card static">
+        <span class="badge ok">Preprint</span>
+        <h4>RulePep</h4>
+        <p>Interpretable ESM-guided neural-symbolic peptide classification, in collaboration with Prof. Heewook Lee.</p>
+        <small><a href="https://doi.org/10.64898/2026.07.03.736448" target="_blank" rel="noopener">bioRxiv, Jul 2026 ↗</a></small>
+      </article>
+    </div>
+
+    <h3>My role</h3>
+    <p class="note">My contributions to these projects have primarily been validation, methodological review, manuscript editing, and literature cross-checking. On all publications below my CRediT roles are <em>Validation</em> and <em>Writing, review &amp; editing</em>: critical pre-submission peer review, methodological validity assessment, data and procedural consistency verification, literature cross-checks, and citation validation.</p>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="reveal">
+    <h2>Publications &amp; preprints</h2>
+    <p class="muted">All preprints are on bioRxiv and have not been peer reviewed.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter publications"></div>
+    <ol class="pubs" id="pubs"></ol>
+  </section>
+
+  <!-- TALKS -->
+  <section id="talks" class="reveal">
+    <h2>Conference abstracts &amp; presentations</h2>
+    <div class="timeline" id="talklist"></div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="reveal">
+    <h2>Education</h2>
+    <div class="grid two">
+      <article class="card static">
+        <h4>B.Sc. in Computer Science</h4>
+        <p>Islamic Azad University, Shiraz Branch, Iran</p>
+        <small>Oct 2023 – present</small>
+        <div class="gpa">
+          <div><b>19.61</b><span>latest semester GPA /20</span></div>
+          <div><b>16.18</b><span>cumulative GPA /20</span></div>
+        </div>
+        <small>Latest semester up from about 15.</small>
+      </article>
+      <article class="card static">
+        <h4>High School Diploma, Natural Sciences</h4>
+        <p>National Organization for Development of Exceptional Talents (Sampad), Marvdasht, Iran</p>
+        <small>2017 – 2023</small>
+      </article>
+    </div>
+  </section>
+
+  <!-- LEARNING -->
+  <section id="learning" class="reveal">
+    <h2>Selected study &amp; independent learning</h2>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="tabpanel" id="tabpanel" role="tabpanel"></div>
+  </section>
+
+  <!-- OUTREACH -->
+  <section id="outreach" class="reveal">
+    <h2>Scientific outreach &amp; volunteering</h2>
+    <div class="cards">
+      <article class="card static"><h4>R&amp;D Team Head</h4><p>EHIA Association</p><small>2024 – 2025</small></article>
+      <article class="card static"><h4>Executive Team</h4><p>CS50xShiraz (2024)<br>INRP (2025 – 2026)</p></article>
+      <article class="card static"><h4>Scientific Writer</h4><p>Biocan Magazine (2024 – 2025)<br>GABA Neuroscience Association (Jul – Sep 2024)</p></article>
+      <article class="card static"><h4>Teaching</h4><p>Scratch &amp; ScratchJr (2024 – 2025)<br>English language (one semester)</p></article>
+    </div>
+    <p class="muted">Languages: Persian (native) · English (professional) · French (A1)</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal contact">
+    <h2>Let's connect</h2>
+    <p>I'm especially interested in research collaborations and opportunities that combine computational design with hands-on experimental work.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:fz.keshtkar@gmail.com">fz.keshtkar@gmail.com</a>
+      <button class="btn" id="copy">Copy email</button>
+    </div>
+    <div class="links">
+      <!-- TODO: replace the three # links with your real profile URLs -->
+      <a href="#" id="lnk-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" id="lnk-orcid" target="_blank" rel="noopener">ORCID</a>
+      <a href="#" id="lnk-scholar" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Fateme Zahra Keshtkar</footer>
+<script src="script.js"></script>
+</body>
 </html>

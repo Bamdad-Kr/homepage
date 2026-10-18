@@ -1,4 +1,6 @@
-# Resume with HTML
-Hello World!
-This is my first HTML project, **a completely basic online resume** built using HTML.  
-Feel free to share your expriences.
+# Fateme Zahra Keshtkar — personal homepage
+
+Static site (HTML/CSS/JS, no build step), based on my CV.
+
+- Edit publications, talks and study lists at the top of `script.js`.
+- My original basic HTML resume is kept at [`/old-resume/`](old-resume/index.html).
