@@ -1,4 +1,4 @@
-# Fateme Zahra Keshtkar — personal homepage
+# Personal Homepage
 
 Static site (HTML/CSS/JS, no build step), based on my CV.
 
